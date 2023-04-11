@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --heading:rgba(0,10,48);
+    --para:#777;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #000000db;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+} 
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p{
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+
+
+
+.col{
+    border-bottom: 1px solid whitesmoke;
+    padding: 1.5em 0;
+}
+
+
+
+.col-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;    
+    font-size: 1.3rem;
+}
+
+
+.arrow-btn i{
+    transition: transform 300ms ease-in-out;
+}
+
+.col-body{
+    height: 0rem;
+    opacity: 0;
+    transition: height 1s ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    visibility: hidden;
+    
+}
+.col-body p{
+    padding: 1.5em 0.5em;
+    font-size: 1.29rem;
+    color: #f5f5f5c9;
+    pointer-events: none;
+}
+
+
+
+.active{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+@media(min-width:800px){
+
+    .col-head{
+        font-size: 1.6rem;
+    }
+    
+    .col-body p{
+        font-size: 1.5rem;
+    }
+}
